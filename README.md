@@ -1,12 +1,12 @@
 # ptiny.helloworld
 =======
-##概要 abstract
+## 概要 abstract
 gradleわかんねー
 kotlineもっとわかんねー
 今さら新しいこと覚えたくないんじゃーjavaで書かせろ！！
 という人のための最小限の変更でhelloworld
 
-##開発環境 setup
+## 開発環境 setup
 wget https://dl.google.com/android/cli/latest/linux_x86_64/install_root.sh
 sudo bash ./install_rootsh
 export ANDROID_HOME=/opt/android-sdk #お好みで
@@ -15,12 +15,12 @@ sudo mkdir -p $ANDROID_HOME
 sudo chown $USER:$USER $ANDROID_HOME -R
 android sdk install platform-tools platforms/android-36
 
-##生成 create
-###概要
+## 生成 create
+### 概要
 testの消去
 kotlinの消去
 javaのpackage、layout、theme、dependenciesの変更
-###具体例
+### 具体例
 `
 $ android --no-metrics create --min-sdk=21 --application-id=ptiny.helloworld --namespace=ptiny.helloworld --name "Hello World"
 $ rm -rf app/src/{androidTest/,test/,main/java/}
@@ -80,7 +80,7 @@ $ vi app/src/main/res/values/themes.xml
 </resources>
 `
 
-##備考
+## 備考
 android createはネットワック繋がってないと落ちる！
 android --no-metricsしないと統計情報が送られる！！
 邪悪、邪悪な企業っすな・・・
